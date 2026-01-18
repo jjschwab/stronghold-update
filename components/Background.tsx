@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Background() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number | null>(null);
   const [ready, setReady] = useState(false);
   
   // Physics State
