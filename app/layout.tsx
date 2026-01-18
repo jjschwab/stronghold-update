@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Stronghold Labs",
   description: "Advanced algorithmic solutions",
   icons: {
-    icon: "/SL_logo.png", // <--- This sets the tab icon
+    icon: "/SL_Logo_Updated.png", // <--- This sets the tab icon
   },
 };
 
