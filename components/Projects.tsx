@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 const projects = [
   {
     id: "merit",
-    client: "MeritAI", 
+    client: "Dr. Phil's MeritAI", 
     hoverLabel: "Branded Multipurpose Agent", 
     title: "Context-Aware Broadcast Agent",
     stats: [
@@ -19,13 +19,13 @@ const projects = [
     ],
     description: "A specialized agent created for Dr. Phil's Merit Street Media. The unique architecture minimizes the learning curve for users through a proactive agent design. With access to 3 high-powered tools and multi-turn tool usage, MeritAI accelerates production workflows across a diverse range of production teams.",
     images: [
-      "/meritAI/1.png", "/meritAI/2.png", "/meritAI/3.png", "/meritAI/4.png",
+      "/meritAI/drphil.png", "/meritAI/1.png", "/meritAI/2.png", "/meritAI/3.png", "/meritAI/4.png",
       "/meritAI/5.png", "/meritAI/6.png", "/meritAI/7.png", "/meritAI/8.png"
     ]
   },
   {
     id: "chariot",
-    client: "Chariot", 
+    client: "Slipstream", 
     hoverLabel: "AI-Powered Media Distribution", 
     title: "Real-Time Media Extraction",
     stats: [
@@ -33,7 +33,7 @@ const projects = [
       { label: "Format", value: "Livestream and VOD" },
       { label: "Output", value: "Social Media Clips" },
     ],
-    description: "Chariot detects, processes, and distributes key moments from video media faster than a human can. Whether it's a football game, a gaming stream, a late-night DJ set, or a wildlife cam, Chariot is the premier solution for AI-accelerated and targeted media distribution.",
+    description: "Slipstream detects, processes, and distributes key moments from video media faster than a human can. Whether it's a football game, a gaming stream, a late-night DJ set, or a wildlife cam, Slipstream is the premier solution for AI-accelerated and highlight distribution.",
     images: ["/chariot/1.png", "/chariot/2.png", "/chariot/3.png"]
   },
   {

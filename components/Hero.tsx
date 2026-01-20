@@ -35,7 +35,7 @@ export default function Hero() {
           </div>
           
           <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            High-end AI Products, Strategy, and Custom Integration. <br className="hidden md:block" />
+            Advanced AI Products, Strategy, and Custom Integration. <br className="hidden md:block" />
             Find your competitive edge.
           </p>
         </div>

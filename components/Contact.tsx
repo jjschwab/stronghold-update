@@ -24,7 +24,8 @@ export default function Contact() {
     <section id="contact" className="relative w-full pb-32 pt-0 px-4 overflow-hidden scroll-mt-28">
       <div className="relative z-10 max-w-7xl mx-auto">
         
-        <div className="w-full flex flex-col items-end pt-12 mb-10 md:mb-20">
+        {/* HEADER: Swapped from items-end to items-start (LEFT) */}
+        <div className="w-full flex flex-col items-start pt-12 mb-10 md:mb-20">
             <h2 className={`${inter.className} text-3xl md:text-4xl font-medium text-white`}>
               Contact
             </h2>
@@ -33,10 +34,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
           
-          {/* MOBILE ORDERING: 
-             We want this TEXT section to be FIRST on mobile (order-1), 
-             but LEFT on desktop (also order-1). So it stays order-1.
-          */}
+          {/* TEXT SECTION (Left on Desktop, Top on Mobile) */}
           <div className="flex flex-col justify-between order-1 lg:order-1">
             <div className="space-y-6 md:space-y-8">
               <h3 className={`${inter.className} text-xl md:text-2xl text-white font-medium`}>
@@ -48,22 +46,42 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="mt-8 lg:mt-0">
-               <div className="mb-4">
-                  <span className={`${inter.className} text-xs text-gray-500 tracking-widest`}>
-                    Direct Line
-                  </span>
+            {/* CONTACT DETAILS */}
+            <div className="mt-8 lg:mt-0 flex flex-col gap-8">
+               
+               {/* Email */}
+               <div>
+                  <div className="mb-4">
+                      <span className={`${inter.className} text-xs text-gray-500 tracking-widest`}>
+                        Direct Line
+                      </span>
+                  </div>
+                  <a href="mailto:contact@strongholdlabs.io" className={`${inter.className} text-lg md:text-2xl text-white hover:text-gray-300 transition-colors border-b border-white/20 pb-1`}>
+                    contact@strongholdlabs.io
+                  </a>
                </div>
-               <a href="mailto:joe@strongholdlabs.io" className={`${inter.className} text-lg md:text-2xl text-white hover:text-gray-300 transition-colors border-b border-white/20 pb-1`}>
-                 joe@strongholdlabs.io
-               </a>
+
+               {/* LinkedIn */}
+               <div>
+                  <div className="mb-4">
+                      <span className={`${inter.className} text-xs text-gray-500 tracking-widest`}>
+                        Connect
+                      </span>
+                  </div>
+                  <a 
+                    href="https://www.linkedin.com/company/strongholdlabs/posts/?feedView=all" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={`${inter.className} text-lg md:text-2xl text-white hover:text-gray-300 transition-colors border-b border-white/20 pb-1`}
+                  >
+                    LinkedIn
+                  </a>
+               </div>
+
             </div>
           </div>
 
-          {/* MOBILE ORDERING:
-             We want the FORM to be SECOND on mobile (order-2),
-             and RIGHT on desktop (lg:order-2).
-          */}
+          {/* FORM SECTION (Right on Desktop, Bottom on Mobile) */}
           <div className="order-2 lg:order-2">
             <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-6">
               

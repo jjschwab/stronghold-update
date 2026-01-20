@@ -10,7 +10,6 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // 20px threshold for the "glass" effect activation
       if (window.scrollY > 20) {
         setIsScrolled(true);
       } else {
@@ -39,23 +38,16 @@ export default function Header() {
           : "bg-transparent border-transparent py-6 md:py-8"
       }`}
     >
-      {/* LAYOUT FIX: 
-         - Removed 'max-w-7xl mx-auto' to fix the margin issue.
-         - Used 'w-full px-4 md:px-8' to push content to the edges (matching your original).
-      */}
       <div className="w-full px-4 md:px-8 flex items-center justify-between">
         
-        {/* LEFT AREA: Logo & Title */}
+        {/* LEFT AREA: Logo */}
         <div 
           className="flex items-center gap-4 cursor-pointer group" 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-           {/* THE CSS LOGO (Used on BOTH Mobile & Desktop now) */}
            <div className="w-10 h-10 border border-white flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:text-black">
               <span className={`${inter.className} font-medium text-lg text-white group-hover:text-black`}>SL</span>
            </div>
-
-           {/* TITLE TEXT: Hidden on Mobile, Visible on Desktop */}
            <span className={`${inter.className} text-xl font-medium tracking-wide text-white hidden md:block`}>
              Stronghold Labs
            </span>
@@ -64,16 +56,20 @@ export default function Header() {
         {/* RIGHT AREA: Nav & Contact */}
         <div className="flex items-center gap-8">
            
-           {/* DESKTOP NAV LINKS: Hidden on Mobile */}
            <nav className="hidden md:flex items-center gap-8">
-             <button onClick={() => scrollToSection('services')} className={`${inter.className} text-sm text-gray-300 hover:text-white transition-colors`}>Services</button>
+             <button onClick={() => scrollToSection('services')} className={`${inter.className} text-sm text-gray-300 hover:text-white transition-colors`}>Studio</button>
              <div className="w-px h-3 bg-white/20"></div>
-             <button onClick={() => scrollToSection('projects')} className={`${inter.className} text-sm text-gray-300 hover:text-white transition-colors`}>Projects</button>
+             
+             <a href="https://beta.strongholdlabs.io" target="_blank" rel="noopener noreferrer" className={`${inter.className} text-sm text-gray-300 hover:text-white transition-colors`}>Slipstream</a>
              <div className="w-px h-3 bg-white/20"></div>
-             <button onClick={() => scrollToSection('team')} className={`${inter.className} text-sm text-gray-300 hover:text-white transition-colors`}>Team</button>
+             
+             <button onClick={() => scrollToSection('about')} className={`${inter.className} text-sm text-gray-300 hover:text-white transition-colors`}>About Us</button>
+             <div className="w-px h-3 bg-white/20"></div>
+
+             {/* NEW: Join Us Link */}
+             <button onClick={() => scrollToSection('careers')} className={`${inter.className} text-sm text-gray-300 hover:text-white transition-colors`}>Join Us</button>
            </nav>
 
-           {/* CONTACT BUTTON: Always Visible */}
            <button 
              onClick={() => scrollToSection('contact')}
              className={`
