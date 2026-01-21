@@ -18,7 +18,7 @@ const studioProjects = [
       { label: "Tools", value: "Internal Document RAG, Specialized Research, Data.gov RAG" },
     ],
     description: "A specialized agent created for Dr. Phil's Merit Street Media. The unique architecture minimizes the learning curve for users through a proactive agent design. With access to 3 high-powered tools and multi-turn tool usage, MeritAI accelerates production workflows across a diverse range of production teams.",
-    images: ["/meritAI/1.png", "/meritAI/2.png", "/meritAI/3.png", "/meritAI/4.png", "/meritAI/5.png"]
+    images: ["/meritAI/drphil.png","/meritAI/1.png", "/meritAI/2.png", "/meritAI/3.png", "/meritAI/4.png", "/meritAI/5.png"]
   },
   {
     id: "ethos",
